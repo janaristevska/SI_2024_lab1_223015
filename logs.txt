@@ -1,0 +1,35 @@
+commit c7ce308d01ff30f110b7f9796b2b2e0511cf533a (HEAD -> master, origin/master, origin/bug2, bug2)
+Author: Jana Ristevska <janaristevska@students.finki.ukim.mk>
+Date:   Sun Apr 14 18:19:21 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 2b9a5f97fa3abd8629d8d26811f4420bdcd0019b
+Author: Jana Ristevska <janaristevska@students.finki.ukim.mk>
+Date:   Sun Apr 14 18:16:05 2024 +0200
+
+     Fix wrong condition in makeBigStringFrom
+
+commit 1411cf90840a4751d47d9972c1c4665918ed8ed9 (origin/bug1, bug1)
+Author: Jana Ristevska <janaristevska@students.finki.ukim.mk>
+Date:   Sun Apr 14 18:17:47 2024 +0200
+
+    Call method filterOddLengthStrings in main class
+
+commit 7ee75d7cff728e74a3ae5e3ee20eea29bc3dc046
+Author: Jana Ristevska <janaristevska@students.finki.ukim.mk>
+Date:   Sun Apr 14 18:14:55 2024 +0200
+
+    Fix wrong condition in filterOddLengthStrings
+
+commit 53556b995c4aee9e7da95c721a1a55add5f42f45
+Author: Jana Ristevska <janaristevska@students.finki.ukim.mk>
+Date:   Sun Apr 14 18:12:29 2024 +0200
+
+    Add starter code
+
+commit 7d5d7e147969bf8bd3b6adec56373e5751ab621f
+Author: Jana Ristevska <janaristevska@students.finki.ukim.mk>
+Date:   Sun Apr 14 18:12:04 2024 +0200
+
+    Initial commit

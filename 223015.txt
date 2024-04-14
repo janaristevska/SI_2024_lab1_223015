@@ -1,0 +1,83 @@
+4. На мојот компјутер, направив локален репозиториум.
+   cd "D:\Desktop\SI_2024_lab1_223015"
+   Го иницијализирам директориумот со:
+   git init 
+ 
+5. git remote add origin https://github.com/janaristevska/SI_2024_lab1_223015.git 
+6. nano README.md
+   git add README.md
+   git commit -m "Initial commit"
+7. git add .
+   git commit -m "Add starter code"
+
+8. git push origin master
+
+9. git branch bug1
+   git branch bug2
+
+10. git checkout bug1 
+11. Во методот filterOddLengthStrings грешлката е тоа што се филтрираат стринговите со парна должина el.length() == 2, за да ги филтрираме непарните треба да се замени со el.length != 2. 
+    git add .
+    git commit -m "Fix wrong condition in filterOddLengthStrings"
+
+12. git checkout bug2 
+13. Локално направив промена на el.length() < minLength во el.length() >= minLength.
+    git add .
+    git commit -m "Fix wrong condition in makeBigStringFrom"
+14. git checkout bug1
+15. Во класата SILab1Main, на 16та линија го додадов System.out.println(SILab1_1.filterOddLengthStrings(list)).
+    git add .
+    git add commit -m "Call method filterOddLengthStrings in main class"
+16. git checkout bug2
+17. Во класата SILab1Main, na 16та линија го додадов System.out.println(SILab1_2.makeBigStringFrom(list));.
+    git add .
+    git commit -m "Call method makeBigStringFrom in main class"
+18. git push --all
+19. git checkout master
+20. git merge bug1
+Нема конфликт, се спојуваат со Fast Froward
+Updating a1bf3ba..a2af089
+Fast-forward
+ SILab1Main.java | 1 +
+ SILab1_1.java   | 2 +-
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+
+21. git push origin master
+    git push --all
+22. git checkout bug2
+23. git rebase master 
+Има конфликт. 
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+error: could not apply ed7f1d7... Call method makeBigStringFrom in main class
+hint: Resolve all conflicts manually, mark them as resolved with
+hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+hint: You can instead skip this commit: run "git rebase --skip".
+hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+Could not apply ed7f1d7... Call method makeBigStringFrom in main class
+
+
+<<<<<<< HEAD
+        System.out.println(SILab1_1.filterOddLengthStrings(list))
+=======
+        System.out.println(SILab1_2.makeBigStringFrom(list));
+>>>>>>> ed7f1d7 (Call method makeBigStringFrom in main class)
+
+Го решавам проблемот со бришење на линијата ed7f1d7 (Call method makeBigStringFrom in main class). 
+
+git add SILab1Main.java
+git rebase --continue
+git commit --amend
+
+24. git checkout master
+25. $ git merge bug2
+Нема конфликт, се спојуваат со Fast Forward.
+Updating a2af089..f73b126
+Fast-forward
+ SILab1_2.java | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+26. git push --all
+27. git push origin bug2 --force
+
+
